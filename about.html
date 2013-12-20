@@ -31,7 +31,7 @@
       <section id="main_content" class="inner">
         <h3><a name="structure" class="anchor" href="#structure"><span class="octicon octicon-link"></span></a>Structure</h3>
         <ul>
-          <li>OGSkin - A class containing the material, font anda list of OGStyles</li>
+          <li>OGSkin - A class containing the material, font and a list of OGStyles</li>
           <li>OGStyle - Texture coordinates, text formatting and margin/padding/border options</li>
           <li>OGRoot - Draws and updates all OGWidget children</li>
           <li>OGWidget - The base class upon which all other classes are based on</li>
@@ -44,6 +44,10 @@
           OpenGUI utilises the low-level OpenGL library in Unity. Every base widget has its own drawing rectangle and texture coordinates depending on the assigned OGStyle. OGRoot starts the draw loop by setting a pixel matrix according to the screen size, passes the atlas material from the OGSkin and then uses the drawing rectangles and texture coordinates to "move and crop the atlas" for every widget. The depth of a widget is solely dependent on the Z buffer, so there should be no confusion about what is on top of what.
         </p>
 
+        <h3><a name="position-scale" class="anchor" href="#position-scale"><span class="octicon octicon-link"></span></a>Positioning and scaling</h3>
+        <p>
+          Screen-relative stretching and anchoring is calculated on the Transform component first. Then the position and scale of the drawing rectangle is derived from the Transform component and recalculated to fit the "flipped"" coordinates of OpenGL.
+        </p>
 
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
 
