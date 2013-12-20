@@ -31,32 +31,22 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a name="what-is-it" class="anchor" href="#what-is-it"><span class="octicon octicon-link"></span></a>What is it?</h3>
+        <h3><a name="structure" class="anchor" href="#structure"><span class="octicon octicon-link"></span></a>Structure</h3>
+        <ul>
+          <li>OGSkin - A class containing the material, font anda list of OGStyles</li>
+          <li>OGStyle - Texture coordinates, text formatting and margin/padding/border options</li>
+          <li>OGRoot - Draws and updates all OGWidget children</li>
+          <li>OGWidget - The base class upon which all other classes are based on</li>
+          <li>OGSlicedSprite, OGLabel, OGSprite - "Base widgets" that compose every subsequent widget</li>
+          <li>OGButton, OGSlider, OGTickBox, OGTabs, OGScrollView, OGPopUp, OGDropDown, etc..</li>
+        </ul>
+      
+        <h3><a name="rendering" class="anchor" href="#rendering"><span class="octicon octicon-link"></span></a>Rendering</h3>
+        <p>
+          OpenGUI utilises the low-level OpenGL library in Unity. Every base widget has its own drawing rectangle and texture coordinates depending on the assigned OGStyle. OGRoot starts the draw loop by setting a pixel matrix according to the screen size, passes the atlas material from the OGSkin and then uses the drawing rectangles and texture coordinates to "move and crop the atlas" for every widget. The depth of a widget is solely dependent on the Z buffer, so there should be no confusion about what is on top of what.
+        </p>
 
-<p>It's a versatile and super simple GUI framework for Unity.
-It takes advantage of the native GUI classes, but allows you to work with it in edit mode and to some extent with 3D objects as well.
-It's still in its early stages, but I consider it ready for a beta release.
-I am developing this in tandem with my Deus Ex-based game project <a href="http://mrzapp.github.io/vongott/">The Vongott Chronicles</a></p>
 
-<h3>
-<a name="version-10" class="anchor" href="#version-10"><span class="octicon octicon-link"></span></a>Version 1.0</h3>
-
-<p>The upcoming version of OpenGUI will deprecate the use of OnGUI draw calls and move towards the low-level GL API. It's well under way, but still in the works. If you want to test it out, check out the "testing" project in this repo.</p>
-
-<h3>
-<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h3>
-
-<ul>
-<li>Drawing 2D &amp; 3D GUI in edit mode (in game view)</li>
-<li>Supports most regular widget types, plus a few odd ones</li>
-<li>Super simple, no bloat</li>
-<li>Sensibly managed and easy to use</li>
-<li>Built-in page manager</li>
-<li>Implements <a>iTween</a> by Bob Berkebile</li>
-<li>MouseOver detection</li>
-<li>Free &amp; Open Source!</li>
-</ul><h3>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
 
 <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/4.0/88x31.png"></a><br>OpenGUI by mrzapp is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br>Based on a work at <a href="https://github.com/mrzapp/opengui" rel="dct:source"></a><a href="https://github.com/mrzapp/opengui">https://github.com/mrzapp/opengui</a>.</p>
