@@ -1,70 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="OpenGUI : Open source GUI framework for Unity" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>OpenGUI by mrzapp</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>OpenGUI</title>
   </head>
-
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/mrzapp/opengui">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/mrzapp/opengui/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/mrzapp/opengui/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/mrzapp/opengui">View on GitHub</a>
+    <div class="wrapper">
 
-          <h1 id="project_title">OpenGUI</h1>
-          <h2 id="project_tagline">Open source GUI framework for Unity</h2>
+      <section>
+        <div id="title">
+          <h1>OpenGUI</h1>
+          <p>Open source GUI framework for Unity</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/mrzapp">mrzapp</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
 
-          <a href="./about.html">How does it work?</a>
+        <h2>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h2>
 
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="what-is-it" class="anchor" href="#what-is-it"><span class="octicon octicon-link"></span></a>What is it?</h3>
+<h3>
+<a name="what" class="anchor" href="#what"><span class="octicon octicon-link"></span></a>What?</h3>
 
 <p>It's a GUI framework for Unity that aims to keep things as simple as possible while keeping draw calls to an absolute minimum. I am developing this in tandem with my Deus Ex-based game project <a href="http://mrzapp.github.io/vongott/">The Vongott Chronicles</a></p>
 
 <h3>
-<a name="version-10" class="anchor" href="#version-10"><span class="octicon octicon-link"></span></a>Version 1.0</h3>
+<a name="why" class="anchor" href="#why"><span class="octicon octicon-link"></span></a>Why?</h3>
 
-<p>The upcoming version of OpenGUI will deprecate the use of OnGUI draw calls and move towards the low-level GL API. It's well under way, but still in the works. If you want to test it out, check out the "testing" project in this repo.</p>
+<p>GUI frameworks for Unity are overpriced, and the built-in API is a ridiculous resource hog with every widget requiring one or two draw calls. And we can't expect Unity to provide a decent UI system "sometime in the future", when we are ready to develop games now :) So this framework is using the OpenGL API to render widgets, and trying its best to be simple and easy to use at the same time.</p>
 
 <h3>
-<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h3>
+<a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h3>
 
 <ul>
-<li>Drawing 2D &amp; 3D GUI in edit mode</li>
-<li>Supports most regular widget types</li>
-<li>Super simple, no bloat</li>
-<li>Sensibly managed and easy to use</li>
-<li>Built-in page manager</li>
-<li>Implements <a>iTween</a> by Bob Berkebile</li>
-<li>Free &amp; Open Source!</li>
+<li>Yes, it does work with C# project<br>
+</li>
+<li>It is an open source project developed in the contributors' spare time<br>
+</li>
+<li>It won't cost you anything, but it comes without guarantee<br>
+</li>
 </ul><h3>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
+<a name="contribution" class="anchor" href="#contribution"><span class="octicon octicon-link"></span></a>Contribution</h3>
+
+<p>Anyone willing to provide feedback, fixes, new implementations, whatever you might think of are very welcome to join as a contributor.</p>
+
+<h2>
+<a name="faq" class="anchor" href="#faq"><span class="octicon octicon-link"></span></a>FAQ</h2>
+
+<p><strong>Q: Does OpenGUI work with C# even though it's written in UnityScript?</strong><br>
+A: Yep, as long as the provided directory configuration is maintained.</p>
+
+<p><strong>Q: I've created widgets, but nothing's displaying. What's wrong</strong>?<br>
+A: Make sure your OGPage object is the current one, and make sure your OGRoot object has a Camera component</p>
+
+<p><strong>Q: Where are the tutorials and documentation?</strong><br>
+A: In the <a href="https://github.com/mrzapp/opengui/wiki">wiki</a>  </p>
+
+<p><strong>Q: What about examples?</strong><br>
+A: Check out the <a href="https://github.com/mrzapp/opengui/releases/tag/example">example project</a></p>
+
+<p><strong>Q: How can I align object realtive to the screen?</strong><br>
+A: The "anchor" and "pivot" prperties of the OGWidget and subclasses take care of that.</p>
+
+<h2>
+<a name="technical-overview" class="anchor" href="#technical-overview"><span class="octicon octicon-link"></span></a>Technical overview</h2>
+
+<p><img src="https://raw2.github.com/mrzapp/opengui/master/Screenshots/diagram.jpg" alt="diagram"></p>
+
+<h3>
+<a name="rendering" class="anchor" href="#rendering"><span class="octicon octicon-link"></span></a>Rendering</h3>
+
+<p>OpenGUI utilises the low-level OpenGL library in Unity. Every base widget has its own drawing rectangle and texture coordinates depending on the assigned OGStyle. OGRoot starts the draw loop by setting a pixel matrix according to the screen size, passes the atlas material from the OGSkin and then uses the drawing rectangles and texture coordinates to "move and crop the atlas" for every widget. The depth of a widget is solely dependent on the Z buffer, so there should be no confusion about what is on top of what.</p>
+
+<h3>
+<a name="positioning-and-scaling" class="anchor" href="#positioning-and-scaling"><span class="octicon octicon-link"></span></a>Positioning and scaling</h3>
+
+<p>Screen-relative stretching and anchoring is calculated on the Transform component first. Then the position and scale of the drawing rectangle is derived from the Transform component and recalculated to fit the "flipped"" coordinates of OpenGL. </p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by/4.0/88x31.png"></a><br>OpenGUI by mrzapp is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br>Based on a work at <a href="https://github.com/mrzapp/opengui" rel="dct:source"></a><a href="https://github.com/mrzapp/opengui">https://github.com/mrzapp/opengui</a>.</p>
       </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">OpenGUI maintained by <a href="https://github.com/mrzapp">mrzapp</a></p>
-      </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
