@@ -41,18 +41,18 @@
         <h2>
 <a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h2>
 
-<h3>
-<a name="what" class="anchor" href="#what"><span class="octicon octicon-link"></span></a>What?</h3>
+<h4>
+<a name="what" class="anchor" href="#what"><span class="octicon octicon-link"></span></a>What?</h4>
 
 <p>It's a GUI framework for Unity that aims to keep things as simple as possible while keeping draw calls to an absolute minimum. I am developing this in tandem with my Deus Ex-based game project <a href="http://mrzapp.github.io/vongott/">The Vongott Chronicles</a></p>
 
-<h3>
-<a name="why" class="anchor" href="#why"><span class="octicon octicon-link"></span></a>Why?</h3>
+<h4>
+<a name="why" class="anchor" href="#why"><span class="octicon octicon-link"></span></a>Why?</h4>
 
 <p>GUI frameworks for Unity are overpriced, and the built-in API is a ridiculous resource hog with every widget requiring one or two draw calls. And we can't expect Unity to provide a decent UI system "sometime in the future", when we are ready to develop games now :) So this framework is using the OpenGL API to render widgets, and trying its best to be simple and easy to use at the same time.</p>
 
-<h3>
-<a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h3>
+<h4>
+<a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h4>
 
 <ul>
 <li>Yes, it does work with C# project<br>
@@ -61,8 +61,8 @@
 </li>
 <li>It won't cost you anything, but it comes without guarantee<br>
 </li>
-</ul><h3>
-<a name="contribution" class="anchor" href="#contribution"><span class="octicon octicon-link"></span></a>Contribution</h3>
+</ul><h4>
+<a name="contribution" class="anchor" href="#contribution"><span class="octicon octicon-link"></span></a>Contribution</h4>
 
 <p>Anyone willing to provide feedback, fixes, new implementations, whatever you might think of are very welcome to join as a contributor.</p>
 
@@ -89,13 +89,13 @@ A: The "anchor" and "pivot" prperties of the OGWidget and subclasses take care o
 
 <p><img src="https://raw2.github.com/mrzapp/opengui/master/Screenshots/diagram.jpg" alt="diagram"></p>
 
-<h3>
-<a name="rendering" class="anchor" href="#rendering"><span class="octicon octicon-link"></span></a>Rendering</h3>
+<h4>
+<a name="rendering" class="anchor" href="#rendering"><span class="octicon octicon-link"></span></a>Rendering</h4>
 
 <p>OpenGUI utilises the low-level OpenGL library in Unity. Every base widget has its own drawing rectangle and texture coordinates depending on the assigned OGStyle. OGRoot starts the draw loop by setting a pixel matrix according to the screen size, passes the atlas material from the OGSkin and then uses the drawing rectangles and texture coordinates to "move and crop the atlas" for every widget. The depth of a widget is solely dependent on the Z buffer, so there should be no confusion about what is on top of what.</p>
 
-<h3>
-<a name="positioning-and-scaling" class="anchor" href="#positioning-and-scaling"><span class="octicon octicon-link"></span></a>Positioning and scaling</h3>
+<h4>
+<a name="positioning-and-scaling" class="anchor" href="#positioning-and-scaling"><span class="octicon octicon-link"></span></a>Positioning and scaling</h4>
 
 <p>Screen-relative stretching and anchoring is calculated on the Transform component first. Then the position and scale of the drawing rectangle is derived from the Transform component and recalculated to fit the "flipped"" coordinates of OpenGL. </p>
 
