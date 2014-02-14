@@ -1,5 +1,6 @@
 ---
 title: OpenGUI by Jeppe Zapp
+layout: default
 ---
 
 Introduction
