@@ -78,7 +78,7 @@ Make sure to use "anchor" and "stretch" to position your content, if you want it
 <h4>
 <a name="rendering" class="anchor" href="#rendering"><span class="octicon octicon-link"></span></a>Rendering</h4>
 
-<p>OpenGUI utilises the low-level OpenGL library in Unity. Every base widget has its own drawing rectangle and texture coordinates depending on the assigned OGStyle. OGRoot starts the draw loop by setting a pixel matrix according to the screen size, passes the atlas material from the OGSkin and then uses the drawing rectangles and texture coordinates to "move and crop the atlas" for every widget. The depth of a widget is solely dependent on the Z buffer, so there should be no confusion about what is on top of what.</p>
+<p>OpenGUI utilises the low-level OpenGL library in Unity. Every <a href="https://github.com/mrzapp/opengui/wiki/OGWidget"><code>OGWidget</code></a> has its own drawing rectangle and texture coordinates depending on the assigned <a href="https://github.com/mrzapp/opengui/wiki/OGStyle"><code>OGStyle</code></a>. <a href="https://github.com/mrzapp/opengui/wiki/OGRoot"><code>OGRoot</code></a> starts the draw loop by setting a pixel matrix according to the screen size, passes the atlas material from the <a href="https://github.com/mrzapp/opengui/wiki/OGSkin"><code>OGSkin</code></a> and then uses the drawing rectangles and texture coordinates to "move and crop the atlas" for every widget. The depth of a widget is solely dependent on the Z buffer, so there should be no confusion about what is on top of what.</p>
 
 <h4>
 <a name="positioning-and-scaling" class="anchor" href="#positioning-and-scaling"><span class="octicon octicon-link"></span></a>Positioning and scaling</h4>
