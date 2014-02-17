@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="{{ site.description }}">
-		<title>{{ site.name }}</title>
+		<meta name="description" content="">
+		<title></title>
 
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://rawgithub.com/mrzapp/mrzapp.github.com/master/css/zapp.css" >
@@ -61,14 +61,28 @@
 		</div>
 
 		<ul class="nav nav-pills">
-			{% for p in site.pages %}
-			<li {% if p.url == page.url %}class="active"{% endif %}><a href="{{ p.url }}">{{ p.title }}</a></li>
-			{% endfor %}	
+			
+			<li ><a href="/techincal.html">Technical</a></li>
+			
+			<li class="active"><a href="/faq.html">FAQ</a></li>
+			
+			<li ><a href="/index.html">Introduction</a></li>
+				
 		</ul>
 		
 		
 		<div class="container" id="content">
-			{{ content }}
+			<p><strong>Does OpenGUI work with C# even though it&#8217;s written in UnityScript?</strong><br />Yep, as long as the provided directory configuration is maintained and .cs files are in a subfolder, .e.g /Assets/Scripts. This is because of the Unity <a href='http://docs.unity3d.com/412/Documentation/ScriptReference/index.Script_compilation_28Advanced29.html'>compilation order</a>.</p>
+
+<p><strong>I&#8217;ve created widgets, but nothing&#8217;s displaying. What&#8217;s wrong?</strong><br />Make sure your OGPage object is the current one, and make sure your OGRoot object has a Camera component</p>
+
+<p><strong>Where are the tutorials and documentation?</strong><br />In the <a href='https://github.com/mrzapp/opengui/wiki'>wiki</a></p>
+
+<p><strong>What about examples?</strong><br />Check out the <a href='https://github.com/mrzapp/opengui/releases/tag/example'>example project</a></p>
+
+<p><strong>How can I align objects relatively to the screen?</strong><br />The &#8220;anchor&#8221; and &#8220;pivot&#8221; properties of the OGWidget and subclasses take care of that.</p>
+
+<p><strong>How do I deal with different aspect ratios?</strong><br />Make sure to use &#8220;anchor&#8221; and &#8220;stretch&#8221; to position your content, if you want it to be flexible.</p>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

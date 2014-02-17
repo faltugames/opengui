@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="{{ site.description }}">
-		<title>{{ site.name }}</title>
+		<meta name="description" content="">
+		<title></title>
 
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://rawgithub.com/mrzapp/mrzapp.github.com/master/css/zapp.css" >
@@ -61,14 +61,26 @@
 		</div>
 
 		<ul class="nav nav-pills">
-			{% for p in site.pages %}
-			<li {% if p.url == page.url %}class="active"{% endif %}><a href="{{ p.url }}">{{ p.title }}</a></li>
-			{% endfor %}	
+			
+			<li class="active"><a href="/techincal.html">Technical</a></li>
+			
+			<li ><a href="/faq.html">FAQ</a></li>
+			
+			<li ><a href="/index.html">Introduction</a></li>
+				
 		</ul>
 		
 		
 		<div class="container" id="content">
-			{{ content }}
+			<p><img alt='diagram' src='https://raw2.github.com/mrzapp/opengui/master/Screenshots/diagram.jpg' /></p>
+
+<h4 id='rendering'>Rendering</h4>
+
+<p>OpenGUI utilises the low-level OpenGL library in Unity. Every <a href='https://github.com/mrzapp/opengui/wiki/OGWidget'><code>OGWidget</code></a> has its own drawing rectangle and texture coordinates depending on the assigned <a href='https://github.com/mrzapp/opengui/wiki/OGStyle'><code>OGStyle</code></a>. <a href='https://github.com/mrzapp/opengui/wiki/OGRoot'><code>OGRoot</code></a> starts the draw loop by setting a pixel matrix according to the screen size, passes the atlas material from the <a href='https://github.com/mrzapp/opengui/wiki/OGSkin'><code>OGSkin</code></a> and then uses the drawing rectangles and texture coordinates to &#8220;move and crop the atlas&#8221; for every widget. The depth of a widget is solely dependent on the Z buffer, so there should be no confusion about what is on top of what.</p>
+
+<h4 id='positioning_and_scaling'>Positioning and scaling</h4>
+
+<p>Screen-relative stretching and anchoring is calculated on the Transform component first. Then the position and scale of the drawing rectangle is derived from the Transform component and recalculated to fit the &#8220;flipped&#8221;&#8221; coordinates of OpenGL.</p>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
