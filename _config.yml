@@ -3,5 +3,5 @@ safe: true;
 name: "OpenGUI"
 description: ""
 
-url: "http://jeppezapp.com/opengui/"
-baseurl: "http://jeppezapp.com/"
+url: "http://jeppezapp.com/opengui"
+baseurl: "http://jeppezapp.com"
