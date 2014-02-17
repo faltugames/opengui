@@ -1,6 +1,6 @@
 ---
 title: FAQ
-layout: default
+layout: submenu
 ---
 
 #### Does OpenGUI work with C# even though it's written in UnityScript?

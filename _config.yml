@@ -2,3 +2,4 @@ name: "OpenGUI"
 description: ""
 
 url: "http://jeppezapp.com/opengui/"
+baseurl: "http://jeppezapp.com/"
