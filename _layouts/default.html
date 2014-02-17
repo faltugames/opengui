@@ -61,6 +61,8 @@
 		</div>
 
 		<ul class="nav nav-pills">
+			<li class="sitetitle">OpenGUI</li>
+			
 			{% for p in site.pages %}
 			<li {% if p.url == page.url %}class="active"{% endif %}><a href=".{{ p.url }}">{{ p.title }}</a></li>
 			{% endfor %}	

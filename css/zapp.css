@@ -3096,6 +3096,14 @@ input[type="button"].btn-block {
   left: auto;
 }
 .dropup .caret,
+.sitetitle {
+  font-size: 12px;
+  padding: 2px 10px 2px 10px;
+  width: 100px;
+  text-align: right;
+  color: #FAA200;
+  border-right: 1px solid #CCCCCC;
+}
 .navbar-fixed-bottom .dropdown .caret {
   border-top: 0;
   border-bottom: 4px solid;
