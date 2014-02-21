@@ -3,7 +3,7 @@ title: FAQ
 layout: submenu
 ---
 
-### FAQ
+## FAQ
 
 #### Does OpenGUI work with C# even though it's written in UnityScript?
 Yep, as long as the provided directory configuration is maintained and .cs files are in a subfolder, .e.g /Assets/Scripts. This is because of the Unity [compilation order] (http://docs.unity3d.com/412/Documentation/ScriptReference/index.Script_compilation_28Advanced29.html).
