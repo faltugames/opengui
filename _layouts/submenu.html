@@ -103,6 +103,10 @@
 		<script src="{{ site.url }}/js/app.js"></script>
 
 		<div class="container">
+			{% if site.header %}
+			{{ site.header }}
+			{% endif %}
+			
 			{{ content }}
 			
 			{% if page.carousel %}
