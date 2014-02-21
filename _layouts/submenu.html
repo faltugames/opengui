@@ -102,11 +102,11 @@
 		<script src="{{ site.url }}/js/fitvids.js"></script>
 		<script src="{{ site.url }}/js/app.js"></script>
 
+		{% if site.header %}
+		{{ site.header }}
+		{% endif %}
+
 		<div class="container">
-			{% if site.header %}
-			{{ site.header }}
-			{% endif %}
-			
 			{{ content }}
 			
 			{% if page.carousel %}
