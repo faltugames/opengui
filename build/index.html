@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		
+		<title>Introduction</title>
+		
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://jeppezapp.com/css/zapp.css" >
+		<link rel="stylesheet" href="http://jeppezapp.com/css/flexslider.css" >
+		
+		<link rel="stylesheet" href="http://jeppezapp.com/css/plugin.css" >
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="http://jeppezapp.com" class="navbar-brand">Jeppe Zapp</a>
+			  		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+			    			<span class="icon-bar"></span>
+			    			<span class="icon-bar"></span>
+			    			<span class="icon-bar"></span>
+			  		</button>
+				</div>
+				<div class="navbar-collapse collapse" id="navbar-main">
+			  		<ul class="nav navbar-nav">
+			    			<li class="dropdown">
+				      			<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Games <span class="caret"></span></a>
+				      			<ul class="dropdown-menu">
+								<li><a href="http://jeppezapp.com/vongott">The Vongott Chronicles</a></li>
+								<li><a href="http://jeppezapp.com/games/dearleader">Dear Leader</a></li>
+								<li><a href="http://jeppezapp.com/games/rovg">Rise of the Vegan God</a></li>
+								<li><a href="http://jeppezapp.com/games/ninjasprint">Ninja Sprint</a></li>
+								<li><a href="http://jeppezapp.com/games/cyklus">Cyklus</a></li>
+								<li><a href="http://jeppezapp.com/games/bashmaze">Bash Maze</a></li>
+								<li><a href="http://jeppezapp.com/games/swordguy">Sword Guy</a></li>
+				      			</ul>
+				    		</li>
+			    			<li class="dropdown">
+				      			<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Plug-ins <span class="caret"></span></a>
+				      			<ul class="dropdown-menu">
+								<li><a href="http://jeppezapp.com/opengui">OpenGUI</a></li>
+								<li><a href="http://jeppezapp.com/openpath">OpenPath</a></li>
+				      			</ul>
+				    		</li>
+				    		<li>
+				      			<a href="http://jeppezapp.com/cv">CV</a>
+				    		</li>
+			    			<li class="dropdown">
+				      			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact <span class="caret"></span></a>
+				      			<ul class="dropdown-menu">
+								<li><a href="http://github.com/mrzapp">GitHub</a></li>
+								<li><a href="http://linkedin.com/in/jeppezapp">LinkedIn</a></li>
+								<li><a href="http://forum.unity3d.com/members/289274-mrzapp">Unity Forums</a></li>
+								<li><a href="http://soundcloud.com/jeppezapp">SoundCloud</a></li>
+								<li><a href="mailto:contact@jeppezapp.com">Email</a></li>
+				      			</ul>
+				    		</li>
+					</ul>
+				</div>
+		      	</div>
+		</div>
+
+		<div class="submenu">	
+			<div class="container">
+				<ul class="nav nav-pills">
+					<li class="sitetitle">OpenGUI</li>
+					
+					
+					<li ><a href="http://jeppezapp.com/opengui/faq.html">FAQ</a></li>
+					
+					<li ><a href="http://jeppezapp.com/opengui/technical.html">Technical</a></li>
+					
+					<li class="active"><a href="http://jeppezapp.com/opengui/index.html">Introduction</a></li>
+					
+
+
+					
+				</ul>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script src="http://jeppezapp.com/opengui/js/flexslider.min.js"></script>
+		<script src="http://jeppezapp.com/opengui/js/fitvids.js"></script>
+		<script src="http://jeppezapp.com/opengui/js/app.js"></script>
+
+		<div class="container">
+			<h4 id='what'>What?</h4>
+
+<p>It&#8217;s a GUI framework for Unity that aims to keep things as simple as possible while keeping draw calls to an absolute minimum. I am developing this in tandem with my Deus Ex-based game project <a href='http://mrzapp.github.io/vongott/'>The Vongott Chronicles</a></p>
+
+<h4 id='why'>Why?</h4>
+
+<p>GUI frameworks for Unity are overpriced, and the built-in API is a ridiculous resource hog with every widget requiring one or two draw calls. And we can&#8217;t expect Unity to provide a decent UI system &#8220;sometime in the future&#8221;, when we are ready to develop games now :) So this framework is using the OpenGL API to render widgets, and trying its best to be simple and easy to use at the same time.</p>
+
+<h4 id='contribution'>Contribution</h4>
+
+<p>Anyone willing to provide feedback, fixes, new implementations, whatever you might think of are very welcome to join as a contributor.</p>
+
+<h4 id='license'>License</h4>
+<a href='http://creativecommons.org/licenses/by/4.0/' rel='license'><img alt='Creative Commons License' src='http://i.creativecommons.org/l/by/4.0/88x31.png' style='border-width:0' /></a>
+			
+			
+			
+			
+		</div>
+
+		
+		
+		
+
+	</body>
+</html>
+
+

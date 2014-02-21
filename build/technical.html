@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		
+		<title>Technical</title>
+		
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://jeppezapp.com/css/zapp.css" >
+		<link rel="stylesheet" href="http://jeppezapp.com/css/flexslider.css" >
+		
+		<link rel="stylesheet" href="http://jeppezapp.com/css/plugin.css" >
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="http://jeppezapp.com" class="navbar-brand">Jeppe Zapp</a>
+			  		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+			    			<span class="icon-bar"></span>
+			    			<span class="icon-bar"></span>
+			    			<span class="icon-bar"></span>
+			  		</button>
+				</div>
+				<div class="navbar-collapse collapse" id="navbar-main">
+			  		<ul class="nav navbar-nav">
+			    			<li class="dropdown">
+				      			<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Games <span class="caret"></span></a>
+				      			<ul class="dropdown-menu">
+								<li><a href="http://jeppezapp.com/vongott">The Vongott Chronicles</a></li>
+								<li><a href="http://jeppezapp.com/games/dearleader">Dear Leader</a></li>
+								<li><a href="http://jeppezapp.com/games/rovg">Rise of the Vegan God</a></li>
+								<li><a href="http://jeppezapp.com/games/ninjasprint">Ninja Sprint</a></li>
+								<li><a href="http://jeppezapp.com/games/cyklus">Cyklus</a></li>
+								<li><a href="http://jeppezapp.com/games/bashmaze">Bash Maze</a></li>
+								<li><a href="http://jeppezapp.com/games/swordguy">Sword Guy</a></li>
+				      			</ul>
+				    		</li>
+			    			<li class="dropdown">
+				      			<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Plug-ins <span class="caret"></span></a>
+				      			<ul class="dropdown-menu">
+								<li><a href="http://jeppezapp.com/opengui">OpenGUI</a></li>
+								<li><a href="http://jeppezapp.com/openpath">OpenPath</a></li>
+				      			</ul>
+				    		</li>
+				    		<li>
+				      			<a href="http://jeppezapp.com/cv">CV</a>
+				    		</li>
+			    			<li class="dropdown">
+				      			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact <span class="caret"></span></a>
+				      			<ul class="dropdown-menu">
+								<li><a href="http://github.com/mrzapp">GitHub</a></li>
+								<li><a href="http://linkedin.com/in/jeppezapp">LinkedIn</a></li>
+								<li><a href="http://forum.unity3d.com/members/289274-mrzapp">Unity Forums</a></li>
+								<li><a href="http://soundcloud.com/jeppezapp">SoundCloud</a></li>
+								<li><a href="mailto:contact@jeppezapp.com">Email</a></li>
+				      			</ul>
+				    		</li>
+					</ul>
+				</div>
+		      	</div>
+		</div>
+
+		<div class="submenu">	
+			<div class="container">
+				<ul class="nav nav-pills">
+					<li class="sitetitle">OpenGUI</li>
+					
+					
+					<li ><a href="http://jeppezapp.com/opengui/faq.html">FAQ</a></li>
+					
+					<li class="active"><a href="http://jeppezapp.com/opengui/technical.html">Technical</a></li>
+					
+					<li ><a href="http://jeppezapp.com/opengui/index.html">Introduction</a></li>
+					
+
+
+					
+				</ul>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script src="http://jeppezapp.com/opengui/js/flexslider.min.js"></script>
+		<script src="http://jeppezapp.com/opengui/js/fitvids.js"></script>
+		<script src="http://jeppezapp.com/opengui/js/app.js"></script>
+
+		<div class="container">
+			<p><img alt='diagram' src='https://raw2.github.com/mrzapp/opengui/master/Screenshots/diagram.jpg' /></p>
+
+<h4 id='rendering'>Rendering</h4>
+
+<p>OpenGUI utilises the low-level OpenGL library in Unity. Every <a href='https://github.com/mrzapp/opengui/wiki/OGWidget'><code>OGWidget</code></a> has its own drawing rectangle and texture coordinates depending on the assigned <a href='https://github.com/mrzapp/opengui/wiki/OGStyle'><code>OGStyle</code></a>. <a href='https://github.com/mrzapp/opengui/wiki/OGRoot'><code>OGRoot</code></a> starts the draw loop by setting a pixel matrix according to the screen size, passes the atlas material from the <a href='https://github.com/mrzapp/opengui/wiki/OGSkin'><code>OGSkin</code></a> and then uses the drawing rectangles and texture coordinates to &#8220;move and crop the atlas&#8221; for every widget. The depth of a widget is solely dependent on the Z buffer, so there should be no confusion about what is on top of what.</p>
+
+<h4 id='positioning_and_scaling'>Positioning and scaling</h4>
+
+<p>Screen-relative stretching and anchoring is calculated on the Transform component first. Then the position and scale of the drawing rectangle is derived from the Transform component and recalculated to fit the &#8220;flipped&#8221;&#8221; coordinates of OpenGL.</p>
+			
+			
+			
+			
+		</div>
+
+		
+		
+		
+
+	</body>
+</html>
+
+
