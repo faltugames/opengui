@@ -8,4 +8,4 @@ baseurl: "http://jeppezapp.com"
 
 style: "plugin"
 
-header: "<ul class=\"nav nav-tabs\"><li class=\"active\"><a href=\"#\">Introduction</a></li><li><a href=\"#\">FAQ</a></li><li><a href=\"#\">Technical</a></li></ul>"
+header: "<div class=\"tabs\"><ul class=\"nav nav-tabs\"><li class=\"active\"><a href=\"#\">Introduction</a></li><li><a href=\"#\">FAQ</a></li><li><a href=\"#\">Technical</a></li></ul></div>"
