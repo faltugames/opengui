@@ -72,7 +72,9 @@
 		      	</div>
 		</div>
 
-		{% include {{ site.url }}/inc/header.html %}
+		{% if page.include %}
+		{% include {{ site.url }}{{ page.include.header }} %}
+		{% endif %}
 
 		<div class="submenu">	
 			<div class="container">
