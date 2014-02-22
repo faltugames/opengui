@@ -1,4 +1,4 @@
-safe: true;
+safe: true
 
 name: "OpenGUI"
 description: ""
@@ -7,5 +7,5 @@ url: "http://jeppezapp.com/opengui"
 baseurl: "http://jeppezapp.com"
 
 style: "plugin"
-include:
- - header: "/inc/header.html"
+
+header: true
