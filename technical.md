@@ -3,8 +3,6 @@ title: Technical
 layout: submenu
 ---
 
-## Technical overview
-
 ![diagram](https://raw2.github.com/mrzapp/opengui/master/Screenshots/diagram.jpg)
 
 #### Rendering

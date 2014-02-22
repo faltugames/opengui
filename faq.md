@@ -3,8 +3,6 @@ title: FAQ
 layout: submenu
 ---
 
-## FAQ
-
 #### Is this open source? Where is the GitHub page?
 Yes it is, and [here](http://github.com/mrzapp/opengui) it is.
 
