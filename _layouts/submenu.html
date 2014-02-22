@@ -72,10 +72,6 @@
 		      	</div>
 		</div>
 
-		{% if site.header %}
-		{% include header.html %}
-		{% endif %}
-
 		<div class="submenu">	
 			<div class="container">
 				<ul class="nav nav-pills">
@@ -107,7 +103,7 @@
 		<script src="{{ site.url }}/js/app.js"></script>
 
 		{% if site.header %}
-		{{ site.header }}
+		{% include header.html %}
 		{% endif %}
 
 		<div class="container">
