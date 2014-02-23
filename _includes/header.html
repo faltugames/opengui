@@ -1,6 +1,6 @@
 <div class="tabs">
 	<ul class="nav nav-tabs">
-		{% for p in site.pages order:ascending %}
+		{% for p in site.pages order:descending %}
 		<li {% if p.url == page.url %}class="active"{% endif %}><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
 		{% endfor %}
 	</ul>
