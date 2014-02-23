@@ -5,6 +5,6 @@ title: "OpenGUI"
 url: "http://jeppezapp.com/opengui"
 baseurl: "http://jeppezapp.com"
 
-style: "plugin"
+sharedstyle: "plugin"
 
 header: true
