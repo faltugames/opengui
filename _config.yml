@@ -1,7 +1,6 @@
 safe: true
 
-name: "OpenGUI"
-description: ""
+title: "OpenGUI"
 
 url: "http://jeppezapp.com/opengui"
 baseurl: "http://jeppezapp.com"
