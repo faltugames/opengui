@@ -1,6 +1,7 @@
 ---
 title: FAQ
-layout: default
+layout: submenu
+index: 1
 ---
 
 #### Is this open source? Where is the GitHub page?

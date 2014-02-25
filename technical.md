@@ -1,6 +1,7 @@
 ---
 title: Technical
 layout: default
+index: 2
 ---
 
 ![diagram](https://raw2.github.com/mrzapp/opengui/master/Screenshots/diagram.jpg)
