@@ -1,6 +1,6 @@
 ---
 title: FAQ
-layout: submenu
+layout: default
 index: 1
 ---
 
