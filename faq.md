@@ -11,7 +11,7 @@ Yes it is, and [here](http://github.com/mrzapp/opengui) it is.
 Yep, as long as the provided directory configuration is maintained and .cs files are in a subfolder, .e.g /Assets/Scripts. This is because of the Unity [compilation order] (http://docs.unity3d.com/412/Documentation/ScriptReference/index.Script_compilation_28Advanced29.html).
 
 #### I have created widgets, but nothing is displaying. What might be wrong?
-Make sure your [`OGPage`](https://github.com/mrzapp/opengui/wiki/OGPage) object is the current one, and make sure your [`OGRoot`](https://github.com/mrzapp/opengui/wiki/OGRoot) object has a `Camera` component
+Make sure your [`OGPage`](https://github.com/mrzapp/opengui/wiki/OGPage) object is the current one, and make sure your [`OGRoot`](https://github.com/mrzapp/opengui/wiki/OGRoot) object has a [`Camera`](http://docs.unity3d.com/Documentation/ScriptReference/Camera.html) component
 
 #### Where are the tutorials and documentation?
 In the [wiki] (https://github.com/mrzapp/opengui/wiki)  
