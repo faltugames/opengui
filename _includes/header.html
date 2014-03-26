@@ -1,6 +1,6 @@
 <div class="title">
     <div class="container">
-	    <h1>{{ site.title }}</h1> 
+	    <h1>{{ site.title }}<img src="{{ site.url }}/png/logo_128.png" /></h1> 
     </div>
 </div>
 
@@ -9,7 +9,7 @@
 		{% for index in (0..9) %}
 		{% for p in site.pages %}
 		{% if p.index == index %}
-		<li {% if p.url == page.url %}class="active"{% endif %}><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a><img src="{{ site.url }}/png/logo_128.png" />/li>
+		<li {% if p.url == page.url %}class="active"{% endif %}><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></li>
 		{% endif %}
 		{% endfor %}
 		{% endfor %}
